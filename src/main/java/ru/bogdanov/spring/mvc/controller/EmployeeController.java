@@ -11,6 +11,7 @@ import ru.bogdanov.spring.mvc.model.Employee;
  * - form:form - основная форма, которая содержит в себе другие формы
  * - form:input - форма, предназначенная для строки
  * - form:select - выпадающий список
+ * - form:radio button - выбираемое значение
  */
 @Controller
 @RequestMapping("/employee")
