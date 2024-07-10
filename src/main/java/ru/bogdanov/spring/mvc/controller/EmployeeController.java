@@ -4,13 +4,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import ru.bogdanov.spring.mvc.model.Employee;
 
 /**
  * Формы Spring MVC
  * - form:form - основная форма, которая содержит в себе другие формы
  * - form:input - форма, предназначенная для строки
+ * - form:select - выпадающий список
  */
 @Controller
 @RequestMapping("/employee")
