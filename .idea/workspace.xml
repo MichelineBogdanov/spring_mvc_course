@@ -9,9 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="485775f5-57e2-4d8f-ba18-7707c58a3196" name="Changes" comment="+ Option(s) forms">
+    <list default="true" id="485775f5-57e2-4d8f-ba18-7707c58a3196" name="Changes" comment="+ Radio button(s) forms">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/bogdanov/spring/mvc/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bogdanov/spring/mvc/controller/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/bogdanov/spring/mvc/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/bogdanov/spring/mvc/model/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/model_test/askDetailsViewTestModel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/model_test/askDetailsViewTestModel.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/model_test/showDetailsViewTestModel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/model_test/showDetailsViewTestModel.jsp" afterDir="false" />
@@ -162,7 +161,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719929734078</updated>
-      <workItem from="1719929735522" duration="12874000" />
+      <workItem from="1719929735522" duration="13913000" />
     </task>
     <task id="LOCAL-00001" summary="+ First views &amp; simple controller">
       <created>1719999132330</created>
@@ -192,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1720636148789</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="+ Radio button(s) forms">
+      <created>1720636847741</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720636847741</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +220,7 @@
     <MESSAGE value="+ Request params" />
     <MESSAGE value="+ Input forms" />
     <MESSAGE value="+ Option(s) forms" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ Option(s) forms" />
+    <MESSAGE value="+ Radio button(s) forms" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Radio button(s) forms" />
   </component>
 </project>

@@ -1,6 +1,8 @@
 package ru.bogdanov.spring.mvc.model;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Employee {
@@ -12,6 +14,8 @@ public class Employee {
     private Map<String, String> departments = new HashMap<>();
     private String carBrand;
     private Map<String, String> carBrands = new HashMap<>();
+    private List<String> languages = new ArrayList<>();
+    private List<String> empLanguages = new ArrayList<>();
 
     public Employee() {
         departments.put("Information Technologies", "IT");
@@ -21,6 +25,10 @@ public class Employee {
         carBrands.put("BMW", "BMW");
         carBrands.put("AUDI", "AUDI");
         carBrands.put("Mercedes", "Mercedes");
+
+        languages.add("FR");
+        languages.add("EN");
+        languages.add("DE");
     }
 
     public String getName() {
@@ -77,6 +85,22 @@ public class Employee {
 
     public void setCarBrands(Map<String, String> carBrands) {
         this.carBrands = carBrands;
+    }
+
+    public List<String> getLanguages() {
+        return languages;
+    }
+
+    public void setLanguages(List<String> languages) {
+        this.languages = languages;
+    }
+
+    public List<String> getEmpLanguages() {
+        return empLanguages;
+    }
+
+    public void setEmpLanguages(List<String> empLanguages) {
+        this.empLanguages = empLanguages;
     }
 
     @Override

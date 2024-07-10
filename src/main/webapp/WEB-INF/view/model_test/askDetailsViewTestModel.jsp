@@ -27,8 +27,13 @@
     AUDI <form:radiobutton path="carBrand" value="AUDI"/>
     Mercedes <form:radiobutton path="carBrand" value="Mercedes"/>--%>
     <form:radiobuttons path="carBrand" items="${employee.carBrands}"/>
-    <%--при нажатии на OK будут срабатывать setter-ы--%>
     <br><br>
+    <%--<form:checkbox path="language" value="FR" label="FR"/>
+    <form:checkbox path="language" value="EN" label="EN"/>
+    <form:checkbox path="language" value="DE" label="DE"/>--%>
+    <form:checkboxes path="empLanguages" items="${employee.languages}"/>
+    <br><br>
+    <%--при нажатии на OK будут срабатывать setter-ы--%>
     <input type="submit" value="OK"/>
 </form:form>
 </body>
