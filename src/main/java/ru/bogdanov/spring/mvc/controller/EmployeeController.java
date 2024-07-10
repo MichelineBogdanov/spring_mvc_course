@@ -2,9 +2,12 @@ package ru.bogdanov.spring.mvc.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import ru.bogdanov.spring.mvc.model.Employee;
+
+import javax.validation.Valid;
 
 /**
  * Формы Spring MVC
@@ -12,6 +15,9 @@ import ru.bogdanov.spring.mvc.model.Employee;
  * - form:input - форма, предназначенная для строки
  * - form:select - выпадающий список
  * - form:radio button - выбираемое значение
+ * Валидация данных
+ * - Java Standard Bean Validation API - спецификация, описывающая правила валидации
+ * - Hibernate Validator - реализация спецификации
  */
 @Controller
 @RequestMapping("/employee")
@@ -26,14 +32,22 @@ public class EmployeeController {
     }
 
     @RequestMapping("/showDetailsTestModel")
-    // регистрируем параметр, привязывая его к аттрибуту модели
-    public String showEmployeeDetails(@ModelAttribute("employee") Employee employee) {
-        // можем изменять объекты
-        String name = employee.getName();
-        employee.setName("Mr. " + name);
-        String surname = employee.getSurname();
-        employee.setSurname(surname + "!");
-        return "model_test/showDetailsViewTestModel";
+    // @ModelAttribute - регистрируем параметр, привязывая его к аттрибуту модели
+    // @Valid - указываем, что необходима валидация аттрибута
+    //
+    public String showEmployeeDetails(@Valid @ModelAttribute("employee") Employee employee
+            , BindingResult bindingResult) {
+        // определяем логику валидации с помощью BindingResult
+        if (bindingResult.hasErrors()) {
+            return "model_test/askDetailsViewTestModel";
+        } else {
+            // можем изменять объекты
+            String name = employee.getName();
+            employee.setName("Mr. " + name);
+            String surname = employee.getSurname();
+            employee.setSurname(surname + "!");
+            return "model_test/showDetailsViewTestModel";
+        }
     }
 
 }

@@ -1,5 +1,8 @@
 package ru.bogdanov.spring.mvc.model;
 
+import ru.bogdanov.spring.mvc.validation.CheckEmail;
+
+import javax.validation.constraints.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -7,8 +10,12 @@ import java.util.Map;
 
 public class Employee {
 
+    @Size(min = 2, message = "name must be minimum 2 symbols")
     private String name;
+    @NotEmpty(message = "surname is required field")
     private String surname;
+    @Min(value = 500, message = "min = 500")
+    @Max(value = 1000, message = "max = 1000")
     private int salary;
     private String department;
     private Map<String, String> departments = new HashMap<>();
@@ -16,6 +23,10 @@ public class Employee {
     private Map<String, String> carBrands = new HashMap<>();
     private List<String> languages = new ArrayList<>();
     private List<String> empLanguages = new ArrayList<>();
+    @Pattern(regexp = "\\d{3}-\\d{2}-\\d{2}", message = "please use pattern XXX-XX-XX")
+    private String phoneNumber;
+    @CheckEmail(value = "qwe.com", message = "email must end qwe.com")
+    private String email;
 
     public Employee() {
         departments.put("Information Technologies", "IT");
@@ -101,6 +112,22 @@ public class Employee {
 
     public void setEmpLanguages(List<String> empLanguages) {
         this.empLanguages = empLanguages;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override
